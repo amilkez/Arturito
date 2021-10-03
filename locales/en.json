@@ -1,0 +1,10 @@
+{
+    "avatar": {
+        "user": "{username}'s avatar:",
+        "self": "Your avatar is:"
+    },
+    "lang": {
+        "newLanguage": "You have selected a new language.",
+        "noAdministrator": "You do not have enough permissions to execute this command"
+    }
+}
