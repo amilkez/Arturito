@@ -7,37 +7,10 @@ const fs = require('fs');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
-const commandFiles = fs
-    .readdirSync('./commands')
-    .filter((file) => file.endsWith('.js'));
 
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
-    client.commands.set(command.data.name, command);
-}
+require('./handlers/events.js')(client);
+require('./handlers/commands.js')(client);
 
-client.once('ready', () => {
-    console.log('ready');
-});
-
-// Command Test
-client.on('interactionCreate', async (interaction) => {
-    if (!interaction.isCommand()) return;
-
-    const command = client.commands.get(interaction.commandName);
-
-    if (!command) return;
-
-    try {
-        await command.execute(interaction);
-    } catch (e) {
-        console.error(e);
-        return interaction.reply({
-            content: 'There was an error while executing this command!',
-            ephemeral: true,
-        });
-    }
-});
 //use the config.json if you're hosting it, use the .env if the server will be hosted elsewhere
 // client.login(process.env.token);
 client.login(token);
