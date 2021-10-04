@@ -2,7 +2,8 @@
     "utilities": {
         "errorEmbed": "Error",
         "noInvitePerms": "I need permission to 'create invitations' to execute this command",
-        "unexpectedError": "An unexpected error has ocurred"
+        "unexpectedError": "An unexpected error has ocurred",
+        "badRequest": "The request was not executed correctly "
     },
     "avatar": {
         "user": "{username}'s avatar:",
@@ -14,6 +15,7 @@
     },
     "youtube": {
         "noChannel": "You need to be in a voice channel to enable this command",
-        "loading": "Starting Youtube Together session..."
+        "loading": "Starting Youtube Together session...",
+        "inviteMessage": "**[Click Here!]({inviteLink} 'Youtube Link')**"
     }
 }

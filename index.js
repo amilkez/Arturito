@@ -9,6 +9,7 @@ const client = new Client({
 });
 
 client.commands = new Collection();
+client.selectMenus = new Collection();
 client.languages = require('i18n');
 
 client.languages.configure({
@@ -54,6 +55,7 @@ async function updateStatus() {
 
 require('./handlers/events.js')(client);
 require('./handlers/commands.js')(client);
+require('./handlers/selectMenus.js')(client);
 
 //use the config.json if you're hosting it, use the .env if the server will be hosted elsewhere
 // client.login(process.env.token);

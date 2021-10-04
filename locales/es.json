@@ -2,7 +2,8 @@
     "utilities": {
         "errorEmbed": "Error",
         "noInvitePerms": "Necesito el permiso de 'crear invitaciones' para ejecutar este comando",
-        "unexpectedError": "Ha ocurrido un error inesperado"
+        "unexpectedError": "Ha ocurrido un error inesperado",
+        "badRequest": "La solicitud no se ejecutó correctamente"
     },
     "avatar": {
         "user": "El avatar de {username} es:",
@@ -14,6 +15,7 @@
     },
     "youtube": {
         "noChannel": "Necesitas estar en un canal de voz para ejecutar este comando",
-        "loading": "Iniciando sesión de Youtube Together..."
+        "loading": "Iniciando sesión de Youtube Together...",
+        "inviteMessage": "**[Haz click aquí]({inviteLink} 'Enlace de Youtube')**"
     }
 }
