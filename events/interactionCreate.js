@@ -31,9 +31,6 @@ module.exports = {
             await command.execute(client, interaction, language);
         } catch (e) {
             console.log(e);
-            return interaction.reply({
-                content: 'Something wrong has occurred',
-            });
         }
     },
 };
