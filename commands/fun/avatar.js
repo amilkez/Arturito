@@ -11,8 +11,7 @@ module.exports = {
                 .setName('user')
                 .setDescription('Which user avatar do you wanna see?')
         ), //22:50
-    async execute(client, interaction) {
-        const language = interaction.member.guild.lang;
+    async execute(client, interaction, language) {
         const user = interaction.options.getUser('user');
         if (user) {
             const embed = new MessageEmbed()

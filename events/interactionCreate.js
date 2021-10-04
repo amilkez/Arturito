@@ -27,7 +27,8 @@ module.exports = {
             });
 
         try {
-            await command.execute(client, interaction);
+            const language = interaction.member.guild.lang;
+            await command.execute(client, interaction, language);
         } catch (e) {
             console.log(e);
             return interaction.reply({

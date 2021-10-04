@@ -1,4 +1,9 @@
 {
+    "utilities": {
+        "errorEmbed": "Error",
+        "noInvitePerms": "I need permission to 'create invitations' to execute this command",
+        "unexpectedError": "An unexpected error has ocurred"
+    },
     "avatar": {
         "user": "{username}'s avatar:",
         "self": "Your avatar is:"
@@ -6,5 +11,9 @@
     "lang": {
         "newLanguage": "You have selected a new language.",
         "noAdministrator": "You do not have enough permissions to execute this command"
+    },
+    "youtube": {
+        "noChannel": "You need to be in a voice channel to enable this command",
+        "loading": "Starting Youtube Together session..."
     }
 }
