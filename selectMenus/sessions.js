@@ -1,13 +1,13 @@
-const createYoutubeTogether = require('../functions/createYoutubeTogether.js');
 const { MessageEmbed } = require('discord.js');
 const config = require('../config.json');
-let applicationID;
+const { DiscordTogether } = require('discord-together');
 
 module.exports = {
     data: {
         name: 'sessions',
     },
     async execute(client, interaction, language) {
+        client.discordTogether = new DiscordTogether(client);
         if (!interaction.member.voice.channel) {
             return interaction.update({
                 content: client.languages.__({
@@ -19,126 +19,205 @@ module.exports = {
         }
         switch (interaction.values[0]) {
             case 'youtube':
-                applicationID = '755600276941176913';
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'youtube'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
                 break;
             case 'fishington':
-                applicationID = '814288819477020702';
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'fishing'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
                 break;
             case 'poker':
-                applicationID = '755827207812677713';
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'poker'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
                 break;
             case 'betrayal':
-                applicationID = '773336526917861400';
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'betrayal'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
                 break;
             case 'chess':
-                applicationID = '832012774040141894';
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'chess'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
+                break;
+            case 'lettertile':
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'lettertile'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
+                break;
+            case 'wordsnack':
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'wordsnack'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
+                break;
+            case 'doodlecrew':
+                client.discordTogether
+                    .createTogetherCode(
+                        interaction.member.voice.channel.id,
+                        'doodlecrew'
+                    )
+                    .then(async (invite) => {
+                        const embed = new MessageEmbed()
+                            .setColor(config.defaultSuccessColor)
+                            .setDescription(
+                                client.languages.__mf(
+                                    {
+                                        phrase: 'youtube.inviteMessage',
+                                        locale: language,
+                                    },
+                                    { inviteLink: invite.code }
+                                )
+                            );
+                        return interaction.update({
+                            content: ' ',
+                            components: [],
+                            embeds: [embed],
+                        });
+                    });
                 break;
         }
-        createYoutubeTogether(
-            client,
-            interaction.member.voice.channel.id,
-            applicationID,
-            900
-        )
-            .then((invite) => {
-                const embed = new MessageEmbed()
-                    .setColor(config.defaultSuccessColor)
-                    .setDescription(
-                        client.languages.__mf(
-                            {
-                                phrase: 'youtube.inviteMessage',
-                                locale: language,
-                            },
-                            { inviteLink: invite.code }
-                        )
-                    );
-                return interaction.update({
-                    content: ' ',
-                    components: [],
-                    embeds: [embed],
-                });
-            })
-            .catch((e) => {
-                if (
-                    e == 'An error has occurred while getting the information'
-                ) {
-                    const errorEmbed = new MessageEmbed()
-                        .setColor(config.defaultErrorColor)
-                        .setTitle(
-                            client.languages.__({
-                                phrase: 'utilities.errorEmbed',
-                                locale: language,
-                            })
-                        )
-                        .setDescription(
-                            client.languages.__({
-                                phrase: 'utilities.unexpectedError',
-                                locale: language,
-                            })
-                        )
-                        .setFooter(
-                            interaction.member.user.username,
-                            interaction.member.user.avatarURL()
-                        );
-                    return interaction.update({
-                        content: ' ',
-                        components: [],
-                        embeds: [errorEmbed],
-                    });
-                } else if (
-                    e ==
-                    "Your bot doesn't have the enough permissions to run this command"
-                ) {
-                    const errorEmbed = new MessageEmbed()
-                        .setColor(config.defaultErrorColor)
-                        .setTitle(
-                            client.languages.__({
-                                phrase: 'utilities.errorEmbed',
-                                locale: language,
-                            })
-                        )
-                        .setDescription(
-                            client.languages.__({
-                                phrase: 'utilities.noInvitePerms',
-                                locale: language,
-                            })
-                        )
-                        .setFooter(
-                            interaction.member.user.username,
-                            interaction.member.user.avatarURL()
-                        );
-                    return interaction.update({
-                        content: ' ',
-                        components: [],
-                        embeds: [errorEmbed],
-                    });
-                } else if (e == 'Bad Request') {
-                    const errorEmbed = new MessageEmbed()
-                        .setColor(config.defaultErrorColor)
-                        .setTitle(
-                            client.languages.__({
-                                phrase: 'utilities.badRequest',
-                                locale: language,
-                            })
-                        )
-                        .setDescription(
-                            client.languages.__({
-                                phrase: 'utilities.badRequest',
-                                locale: language,
-                            })
-                        )
-                        .setFooter(
-                            interaction.member.user.username,
-                            interaction.member.user.avatarURL()
-                        );
-                    return interaction.update({
-                        content: ' ',
-                        components: [],
-                        embeds: [errorEmbed],
-                    });
-                } else {
-                    console.log(e);
-                }
-            });
     },
 };

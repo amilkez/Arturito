@@ -16,6 +16,6 @@
     "youtube": {
         "noChannel": "You need to be in a voice channel to enable this command",
         "loading": "Starting Youtube Together session...",
-        "inviteMessage": "**[Click Here!]({inviteLink} 'Youtube Link')**"
+        "inviteMessage": "**[Click here to start the activity!]({inviteLink} 'Youtube Link')**"
     }
 }

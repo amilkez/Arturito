@@ -1,4 +1,4 @@
-const guildModel = require('../models/guild.js')
+const guildModel = require('../models/guild.js');
 
 module.exports = async (client, interaction, language) => {
     const command = client.commands.get(interaction.commandName);

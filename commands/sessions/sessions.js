@@ -44,6 +44,21 @@ module.exports = {
                         description: 'Start a Chess session',
                         value: 'chess',
                     },
+                    {
+                        label: 'Letter Tile',
+                        description: 'Start a Letter Tile session',
+                        value: 'lettertile',
+                    },
+                    {
+                        label: 'Words Snack',
+                        description: 'Start a Words Snack session',
+                        value: 'wordsnack',
+                    },
+                    {
+                        label: 'Doddle Crew',
+                        description: 'Start a Doddle Crew session',
+                        value: 'doodlecrew',
+                    },
                 ])
         );
         await interaction.reply({
